@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Badwords</title>
+    <title>Result PHP Badwords</title>
 </head>
 <body>
     <header>
@@ -40,7 +40,7 @@
                     </label>
                 </div>
 
-                <input id="badword" name="badword" placeholder="Inserisci il testo qui..." value="" type="text">
+                <input id="badword" name="badword" placeholder="Inserisci il testo qui..." type="text">
             </div>
 
             <div>
