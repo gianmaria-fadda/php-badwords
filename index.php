@@ -15,6 +15,11 @@
     </header>
 
     <main>
+
+        <?php
+            var_dump($_GET)
+        ?>
+
         <div>
             Valore precedente di paragrafo: <?php echo $_GET ['paragraph'] ?>
         </div>
@@ -23,14 +28,14 @@
             Valore precedente di parola da censurare: <?php echo $_GET ['badword'] ?>
         </div>
         
-        <form action="" method="GET">
+        <form action="./result.php" method="GET">
             <div>
                 <div>
                     <label for="paragraph">
                         Paragrafo
                     </label>
                 </div>
-                <textarea id="paragraph" placeholder="Inserisci il testo qui..."></textarea>
+                <textarea id="paragraph" name="paragraph" placeholder="Inserisci il testo qui..."></textarea>
             </div>
 
             <div>
@@ -44,8 +49,8 @@
             </div>
 
             <div>
-                <button type="submite">
-                    invia
+                <button type="submit">
+                    Invia
                 </button>
             </div>
         </form>

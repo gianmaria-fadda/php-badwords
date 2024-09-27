@@ -9,47 +9,46 @@
     <header>
 
         <h1>
-            PHP
+            Result
         </h1>
 
     </header>
 
     <main>
         <div>
-            Valore precedente di paragrafo: <?php echo $_GET ['paragraph'] ?>
+            Parola da censurare: 
+            <p>
+                <?php echo $_GET ['badword'] ?>
+            </p>
         </div>
 
         <div>
-            Valore precedente di parola da censurare: <?php echo $_GET ['badword'] ?>
+            Paragrafo: 
+            <p>
+                <?php echo $_GET ['paragraph'] ?>
+            </p>
+            <div>
+                Lunghezza del paragrafo: <?php echo strlen($_GET ['paragraph']); ?>
+            </div>
         </div>
-        
-        <form action="" method="GET">
+
+        <hr>
+
+        <div>
+            Paragrafo censurato: 
+            <p>
+                <?php echo str_replace($_GET ['badword'], '***', $_GET ['paragraph']); ?>
+            </p>
             <div>
-                <div>
-                    <label for="paragraph">
-                        Paragrafo
-                    </label>
-                </div>
-                <textarea id="paragraph" placeholder="Inserisci il testo qui..."></textarea>
+                Lunghezza del paragrafo censurato: <?php echo strlen(str_replace($_GET ['badword'], '***', $_GET ['paragraph'])); ?>
             </div>
+        </div>
 
-            <div>
-                <div>
-                    <label for="badword">
-                        Parola da censurare
-                    </label>
-                </div>
-
-                <input id="badword" name="badword" placeholder="Inserisci il testo qui..." type="text">
-            </div>
-
-            <div>
-                <button type="submite">
-                    invia
-                </button>
-            </div>
-        </form>
-
+        <div>
+            <a href="./index.php">
+                Torna indietro
+            </a>
+        </div>
     </main>
 </body>
 </html>
